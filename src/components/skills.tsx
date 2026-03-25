@@ -8,75 +8,40 @@ import { Code, Cpu, PenTool, Users } from 'lucide-react';
 const Skills = () => {
   const skillsData = [
     {
-      category: 'Frontend Development',
+      category: 'Languages',
       icon: <Code className="h-5 w-5" />,
-      skills: [
-        'HTML',
-        'CSS',
-        'JavaScript/TypeScript',
-        'Tailwind CSS',
-        'Bootstrap',
-        'Next.js',
-        'React',
-        'Vercel AI SDK',
-        'Gsap',
-      ],
+      skills: ['C/C++', 'Java', 'Python', 'JavaScript', 'Solidity', 'Bash'],
       color: 'bg-blue-50 text-blue-600 border border-blue-200',
     },
     {
-      category: 'Backend & Systems',
-      icon: <Cpu className="h-5 w-5" />,
-      skills: [
-        'Unix',
-        'C',
-        'C++',
-        'Python',
-        'Typescript',
-        'Git',
-        'GitHub',
-        'Docker',
-        'GCP',
-        'PostgreSQL',
-      ],
+      category: 'Frontend Development',
+      icon: <PenTool className="h-5 w-5" />,
+      skills: ['React.js', 'Tailwind CSS', 'HTML/CSS'],
       color: 'bg-emerald-50 text-emerald-600 border border-emerald-200',
     },
     {
-      category: 'Design & Creative Tools',
-      icon: <PenTool className="h-5 w-5" />,
-      skills: ['Figma', 'Davinci Code', 'Illustrator', 'Canva', 'Keynote'],
+      category: 'Backend Development',
+      icon: <Cpu className="h-5 w-5" />,
+      skills: ['Node.js', 'Express.js', 'REST APIs'],
       color: 'bg-indigo-50 text-indigo-600 border border-indigo-200',
     },
     {
-      category: 'Soft Skills',
+      category: 'Databases',
+      icon: <Cpu className="h-5 w-5" />,
+      skills: ['MySQL', 'MongoDB', 'PostgreSQL'],
+      color: 'bg-purple-50 text-purple-600 border border-purple-200',
+    },
+    {
+      category: 'Security Tools',
       icon: <Users className="h-5 w-5" />,
-      skills: [
-        'Communication',
-        'Problem-Solving',
-        'Adaptability',
-        'Learning Agility',
-        'Teamwork',
-        'Creativity',
-        'Focus',
-      ],
+      skills: ['Wireshark', 'Burp Suite', 'Nmap'],
       color: 'bg-amber-50 text-amber-600 border border-amber-200',
     },
     {
-      category: 'AI & Fullstack Engineering',
-      icon: <Cpu className="h-5 w-5" />,
-      skills: [
-        'LLM Providers (ChatGPT, Whisper, Groq, Mistral & Claude)',
-        'AI Agents',
-        'Prompt engineering',
-        'Vector databases (Weaviate, Pinecone)',
-        'RAG (Retrieval-Augmented Generation)',
-        'Tool routing & calling',
-        'Hugging Face Transformers',
-        'Vercel AI SDK',
-        'Supabase',
-        'Prisma',
-        'Next.js',
-      ],
-      color: 'bg-purple-50 text-purple-600 border border-purple-200',
+      category: 'Developer Tools & OS',
+      icon: <Code className="h-5 w-5" />,
+      skills: ['Git', 'GitHub', 'VS Code', 'Linux', 'Unix', 'Windows'],
+      color: 'bg-slate-50 text-slate-600 border border-slate-200',
     },
   ];
 
@@ -116,7 +81,7 @@ const Skills = () => {
       transition={{ duration: 0.6, ease: [0.19, 1, 0.22, 1] }}
       className="mx-auto w-full max-w-5xl rounded-4xl"
     >
-      <Card className="w-full border-none px-0 pb-12 shadow-none">
+      <Card className="w-full border-none bg-transparent px-0 pb-12 shadow-none">
         <CardHeader className="px-0 pb-1">
           <CardTitle className="text-primary px-0 text-4xl font-bold">
             Skills & Expertise

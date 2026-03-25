@@ -1,5 +1,7 @@
 import { Toaster } from '@/components/ui/sonner';
 import { cn } from '@/lib/utils';
+import { ThemeProvider } from '@/components/theme-provider';
+import { ThemeToggle } from '@/components/theme-toggle';
 import { Analytics } from '@vercel/analytics/react';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
@@ -13,43 +15,38 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Toukoum Portfolio',
+  title: 'Siddharth Seth | Portfolio',
   description:
-    'Interactive portfolio with an AI-powered Memoji that answers questions about me, my skills, and my experience',
+    'Portfolio of Siddharth Seth — Computer Science student and Full-Stack Developer.',
   keywords: [
-    'Toukoum',
+    'Siddharth Seth',
     'Portfolio',
     'Developer',
-    'AI',
-    'Interactive',
-    'Memoji',
-    'Web Development',
     'Full Stack',
+    'MERN',
+    'Web Development',
     'Next.js',
     'React',
   ],
   authors: [
     {
-      name: 'Toukoum',
-      url: 'https://toukoum.fr',
+      name: 'Siddharth Seth',
     },
   ],
-  creator: 'Toukoum',
+  creator: 'Siddharth Seth',
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://toukoum.fr',
-    title: 'Toukoum Portfolio',
+    title: 'Siddharth Seth | Portfolio',
     description:
-      'Interactive portfolio with an AI-powered Memoji that answers questions about me',
-    siteName: 'Toukoum Portfolio',
+      'Portfolio of Siddharth Seth — Computer Science student and Full-Stack Developer.',
+    siteName: 'Siddharth Seth Portfolio',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Toukoum Portfolio',
+    title: 'Siddharth Seth | Portfolio',
     description:
-      'Interactive portfolio with an AI-powered Memoji that answers questions about me',
-    creator: '@toukoum',
+      'Portfolio of Siddharth Seth — Computer Science student and Full-Stack Developer.',
   },
   icons: {
     icon: [
@@ -90,9 +87,12 @@ export default function RootLayout({
           inter.variable
         )}
       >
-        <main className="flex min-h-screen flex-col">{children}</main>
-        <Toaster />
-        <Analytics />
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
+          <ThemeToggle />
+          <main className="flex min-h-screen flex-col">{children}</main>
+          <Toaster />
+          <Analytics />
+        </ThemeProvider>
       </body>
     </html>
   );
