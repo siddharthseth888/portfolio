@@ -2,6 +2,7 @@
 
 **Static portfolios are dead.**  
 So I built a dynamic portfolio with color flows.
+You can experience it live! [Portfolio](https://sidse.netlify.app/)
 
 ## 🚀 How to run
 
