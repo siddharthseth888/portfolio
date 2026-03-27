@@ -8,8 +8,8 @@ export function Presentation() {
   // Personal information
   const profile = {
     name: 'Siddharth Seth',
-    age: 'B.Tech+M.Tech CSE Student',
-    location: 'Udaipur, Rajasthan',
+    age: 'B.Tech+M.Tech CSE ',
+    location: 'The LNM Institute of Information Technology, Jaipur',
     description: "Avid Learner, Computer Science student with a solid background in Data Structures, Algorithms, and backend programming.\nExperienced in developing scalable full-stack applications using the MERN stack and efficient RESTful API design.\nEnthusiastic about writing clean, optimized, and production-ready code.",
     src: '/siddharth-photo.jpg',
     fallbackSrc:
